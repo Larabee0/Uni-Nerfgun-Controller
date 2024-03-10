@@ -1,0 +1,85 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainStyleSheet.uss?fileID=7433441132597879392&amp;guid=0e72b83a9f92ec04d99def29dc28c16e&amp;type=3#MainStyleSheet" />
+    <ui:VisualElement name="GameUI" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; margin-left: 0; margin-right: 23px; margin-top: 0; margin-bottom: 23px; position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex;">
+        <ui:VisualElement picking-mode="Ignore" name="GameControls" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: column; align-items: flex-start;">
+            <ui:VisualElement name="ButtonPanel" style="background-color: rgb(25, 29, 37); border-top-color: rgb(7, 189, 255); border-top-width: 1px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                <ui:Button text="Menu" display-tooltip-when-elided="true" name="menuButton" class="NormalButton" style="width: 140px;" />
+                <ui:Button text="Lock Out Real Fire" display-tooltip-when-elided="true" name="lockoutFirebutton" class="NormalButton" style="width: 140px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="SideBar" style="align-items: flex-start; padding-left: 15px; justify-content: space-around; flex-grow: 1;">
+                <ui:Slider picking-mode="Ignore" value="5" high-value="10" direction="Vertical" focusable="false" name="zoomSlider" inverted="true" style="height: 45%;" />
+                <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(25, 29, 37, 0); justify-content: flex-end;">
+                    <ui:VisualElement style="flex-grow: 0; background-color: rgb(25, 29, 37); justify-content: flex-end; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; border-top-color: rgb(7, 189, 255); border-top-width: 1px;">
+                        <ui:Button text="Start" display-tooltip-when-elided="true" name="StartButton" class="NormalButton" />
+                        <ui:Label tabindex="-1" text="Time Remaining" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; color: rgb(255, 255, 255);" />
+                        <ui:Label tabindex="-1" text="0:00:000" display-tooltip-when-elided="true" name="TimeLeftOut" style="-unity-text-align: upper-center; color: rgb(255, 255, 255);" />
+                        <ui:Label tabindex="-1" text="Score" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; color: rgb(255, 255, 255);" />
+                        <ui:Label tabindex="-1" text="99999" display-tooltip-when-elided="true" name="ScoreOut" style="-unity-text-align: upper-center; color: rgb(255, 255, 255);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="ScopeBlackout" picking-mode="Ignore" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: stretch; flex-direction: row; position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
+        <ui:VisualElement name="VisualElement" picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); left: 50%; justify-content: space-between; flex-direction: row; width: 50%;">
+            <ui:VisualElement name="leftBlack" picking-mode="Ignore" style="background-color: rgb(0, 0, 0); width: 25%; height: 100%;" />
+            <ui:VisualElement name="rightBlack" picking-mode="Ignore" style="background-color: rgb(0, 0, 0); height: 100%; width: 25%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" picking-mode="Ignore" style="background-color: rgba(0, 0, 0, 0); left: 50%; justify-content: space-between; flex-direction: column; width: 50%; position: absolute; top: 0; right: 0; bottom: 0;">
+            <ui:VisualElement name="topBlack" picking-mode="Ignore" style="background-color: rgb(0, 0, 0); width: 100%; height: 25%;" />
+            <ui:VisualElement name="bottomBlack" picking-mode="Ignore" style="background-color: rgb(0, 0, 0); height: 25%; width: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="MenuUI" picking-mode="Ignore" style="flex-grow: 1; padding-left: 23px; padding-right: 23px; padding-top: 23px; padding-bottom: 23px; background-color: rgba(38, 44, 51, 0.84); display: flex;">
+        <ui:VisualElement name="SettingsContainer" picking-mode="Ignore" style="background-color: rgb(14, 20, 27); width: 50%; flex-grow: 1; padding-left: 14px; padding-right: 14px; padding-top: 14px; padding-bottom: 14px; display: flex; border-top-color: rgb(7, 189, 255); border-top-width: 1px;">
+            <ui:ScrollView horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="AlwaysVisible" style="min-width: 0; width: 100%; height: 100%;">
+                <ui:VisualElement name="ScopeBlackoutOptions" style="background-color: rgba(0, 0, 0, 0);">
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: center;">
+                        <ui:Button text="Stats" display-tooltip-when-elided="true" name="GameStatsButton" class="NormalButton" />
+                        <ui:Button text="Return to Game" display-tooltip-when-elided="true" name="ReturnToGameButton" class="NormalButton" />
+                        <ui:Button text="Reset Game" display-tooltip-when-elided="true" name="ResetGameButton" class="NormalButton" />
+                        <ui:Button text="Close Game" display-tooltip-when-elided="true" name="CloseGameButton" class="NormalButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgb(37, 42, 50); width: 100%; height: 5px; margin-top: 10px; margin-bottom: 10px;" />
+                    <ui:Label tabindex="-1" text="Game Settings" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; -unity-font-style: bold; font-size: 31px;" />
+                    <ui:Toggle label="Limit Game Time" name="LimitGameTime" value="true" focusable="false" style="width: 100%; flex-direction: column; justify-content: space-between; align-items: center; background-color: rgb(45, 49, 57); padding-top: 2px; padding-bottom: 4px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: upper-center;" />
+                    <ui:Slider picking-mode="Ignore" label="Game Time: 300s" value="60" high-value="300" name="GameTimeSlider" focusable="false" low-value="30" class="standaloneSlider" style="background-color: rgb(45, 49, 57); padding-bottom: 0; margin-bottom: 4px; margin-top: 4px;" />
+                    <ui:Slider picking-mode="Ignore" label="Target Spawn&#10;Interval: 300s" value="3" high-value="10" name="DifficultySlider" focusable="false" low-value="0.2" class="standaloneSlider" style="background-color: rgb(45, 49, 57); padding-bottom: 0; margin-bottom: 4px; margin-top: 4px;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgb(37, 42, 50); width: 100%; height: 5px; margin-top: 10px; margin-bottom: 10px;" />
+                    <ui:Label tabindex="-1" text="Scope Settings" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; -unity-font-style: bold; font-size: 31px;" />
+                    <ui:Slider picking-mode="Ignore" label="Left Blackout" value="42" high-value="100" name="LeftCover" focusable="false" class="standaloneSlider" style="background-color: rgb(45, 49, 57); padding-bottom: 0; margin-bottom: 4px; margin-top: 4px;" />
+                    <ui:Slider picking-mode="Ignore" label="Right Blackout" value="42" high-value="100" name="RightCover" focusable="false" style="background-color: rgb(45, 49, 57); padding-bottom: 0; margin-bottom: 4px; margin-top: 4px;" />
+                    <ui:Slider picking-mode="Ignore" label="Top Blackout" value="42" high-value="100" name="TopCover" focusable="false" style="background-color: rgb(45, 49, 57); padding-bottom: 0; margin-bottom: 4px; margin-top: 4px;" />
+                    <ui:Slider picking-mode="Ignore" label="Bottom Blackout" value="42" high-value="100" name="BottomCover" focusable="false" style="background-color: rgb(45, 49, 57); padding-bottom: 0; margin-bottom: 4px; margin-top: 4px;" />
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgb(37, 42, 50); width: 100%; height: 5px; margin-top: 10px; margin-bottom: 10px;" />
+                    <ui:Label tabindex="-1" text="Other Settings" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; -unity-font-style: bold; font-size: 31px;" />
+                    <ui:Button text="Calibrate Inertial Measurement Unit (Compass)" display-tooltip-when-elided="true" name="CalibrateButton" class="NormalButton" />
+                    <ui:Toggle label="Enable Physical Firing" name="EnablePhysicalFiring" value="true" focusable="false" style="width: 100%; flex-direction: column; justify-content: space-between; align-items: center; background-color: rgb(45, 49, 57); padding-top: 2px; padding-bottom: 4px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; -unity-text-align: upper-center;" />
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement name="StatsContainer" picking-mode="Ignore" style="background-color: rgb(14, 20, 27); width: 50%; flex-grow: 1; padding-left: 14px; padding-right: 14px; padding-top: 14px; padding-bottom: 14px; display: none; border-top-width: 1px; border-top-color: rgb(7, 189, 255);">
+            <ui:ScrollView horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="AlwaysVisible" style="min-width: 0; width: 100%; height: 100%;">
+                <ui:VisualElement name="ScopeBlackoutOptions" style="background-color: rgba(0, 0, 0, 0);">
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: center;">
+                        <ui:Button text="Close" display-tooltip-when-elided="true" name="CloseStats" class="NormalButton" />
+                        <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="StatsMainMenu" class="NormalButton" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-grow: 1; background-color: rgb(37, 42, 50); width: 100%; height: 5px; margin-top: 10px; margin-bottom: 10px;" />
+                    <ui:Label tabindex="-1" text="All Stats For Current Session" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; -unity-font-style: bold; font-size: 31px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="StatTable" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:VisualElement name="StatRow" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: space-around;">
+                        <ui:Label tabindex="-1" text="Score&#10;Per&#10;Second" display-tooltip-when-elided="true" name="SPS" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                        <ui:Label tabindex="-1" text="Score" display-tooltip-when-elided="true" name="Score" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                        <ui:Label tabindex="-1" text="Time (s)" display-tooltip-when-elided="true" name="Time" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                        <ui:Label tabindex="-1" text="Accuracy (%)" display-tooltip-when-elided="true" name="Accuracy" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                        <ui:Label tabindex="-1" text="Hits" display-tooltip-when-elided="true" name="Hits" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                        <ui:Label tabindex="-1" text="Shots" display-tooltip-when-elided="true" name="Shots" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                        <ui:Label tabindex="-1" text="Avg Target&#10;Up Time (s)" display-tooltip-when-elided="true" name="ATUT" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

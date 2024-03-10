@@ -1,0 +1,40 @@
+{
+    "name": "Main",
+    "maps": [
+        {
+            "name": "PlayerWorld",
+            "id": "55d991d4-4f41-425a-9cd5-00ab3b933898",
+            "actions": [
+                {
+                    "name": "Camera",
+                    "type": "Value",
+                    "id": "4b30196a-a483-41c6-a8ba-0b2c76b7886a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1c348882-f149-4fbe-b24a-a6e33cdb4db9",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Phone",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard and Phone",
+            "bindingGroup": "Keyboard and Phone",
+            "devices": []
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="StatRow" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: space-around;">
+        <ui:Label tabindex="-1" text="Score&#10;Per&#10;Second" display-tooltip-when-elided="true" name="SPS" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+        <ui:Label tabindex="-1" text="Score" display-tooltip-when-elided="true" name="Score" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+        <ui:Label tabindex="-1" text="Time (s)" display-tooltip-when-elided="true" name="Time" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+        <ui:Label tabindex="-1" text="Accuracy (%)" display-tooltip-when-elided="true" name="Accuracy" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+        <ui:Label tabindex="-1" text="Hits" display-tooltip-when-elided="true" name="Hits" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+        <ui:Label tabindex="-1" text="Shots" display-tooltip-when-elided="true" name="Shots" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+        <ui:Label tabindex="-1" text="Avg Target&#10;Up Time (s)" display-tooltip-when-elided="true" name="ATUT" style="color: rgb(255, 249, 249); -unity-text-align: middle-center; width: 14.28%;" />
+    </ui:VisualElement>
+</ui:UXML>
