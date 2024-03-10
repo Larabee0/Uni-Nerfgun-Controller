@@ -18,7 +18,7 @@
 # Proposal
 ## COMP102 Nerfgun Game
 #### Early concept of design
-![Initial Design Diagram](https://github.falmouth.ac.uk/Games-Academy-Student-Work-22-23/COMP102-1-2202796/blob/main/Images/Early%20design%20diagram.png?raw=true)
+![Initial Design Diagram](https://github.falmouth.ac.uk/Games-Academy-Student-Work-23-24/BOT-BLASTER-2/blob/main/Images/Early%20design%20diagram.png?raw=true)
 #### Game Design
 This game will turn a a nerfgun into a video game controller for a first person single player shooter game. This game will be similar to Aimlab - just a simple target shooter with no real enemies or tactical AI as a proof of concept.
 The fun part is when you fire the gun it fires both in game and in real life. Although for conviency, this will be a toggleable setting.
