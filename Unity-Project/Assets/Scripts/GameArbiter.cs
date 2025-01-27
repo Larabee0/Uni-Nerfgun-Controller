@@ -59,7 +59,7 @@ public class GameArbiter : MonoBehaviour
 
     public void RestartGame()
     {
-        timeRemaining = totalTime= UIController.Instance.GameTime;
+        timeRemaining = totalTime = UIController.Instance.GameTime;
         score = 0;
         totalHits = 0;
         accuracy = new(100, 0, 0, 0);
@@ -91,6 +91,7 @@ public class GameArbiter : MonoBehaviour
         {
             StopCoroutine(raisableTargets);
             spawnedRaisableTargets.ForEach(target => Destroy(target.gameObject));
+            spawnedRaisableTargets.Clear();
             raisableTargets = null;
         }
     }
@@ -182,6 +183,7 @@ public class GameArbiter : MonoBehaviour
         yield return new WaitForSeconds(staticTargetStartDelay);
         while (true)
         {
+            if (gameEnded) break;
             // pick plane
             int targetPlaneIndex = random.NextInt(0, targetPlanes.Length);
             TargetPlane targetPlane = targetPlanes[targetPlaneIndex];
@@ -218,6 +220,8 @@ public class GameArbiter : MonoBehaviour
         yield return new WaitForSeconds(raisableTargetStartDelay);
         while (true)
         {
+            if (gameEnded) break;
+
             // pick raisable target. I really want to inline "raisableTargetIndex".
             int raisableTargetIndex = random.NextInt(0, spawnedRaisableTargets.Count);
             RaisableTarget target = spawnedRaisableTargets[raisableTargetIndex];

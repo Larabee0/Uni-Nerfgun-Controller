@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class GunCommunication : UDPCommuincator
     [SerializeField] private NerfgunCommandRequest command;
     public NerfgunCommandRequest Command { get => command; set => command = value; }
 
-    public Pulse OnNerfgunFired;
+    public Action OnNerfgunFired;
 
     private int physicalShotsFired = 0;
     public int PhysicalShotsfired => physicalShotsFired;

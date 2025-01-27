@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
 
-// just a delegate to notify a thing to do a thing. seemed like a good place for it to live.
-public delegate void Pulse();
 
 // none of these json classes are actually classes.
 
