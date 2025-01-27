@@ -1,5 +1,10 @@
 # Overview
+1st year project where we had to make a game controller and game using an arduino.
 
+This project was super fun, I love tinkerin with electronics in my spare time, most people hated this module. Again I went mildly overboard and reversed engineered a nerfgun to create an AR like expirence phone game where you shot at virtual targets usin the physical gun.
+
+I was able to achieve a 86/100 on the module with this, with a first being 70/100
+[![Final Demo Video](https://img.youtube.com/vi/WaDtwA2EJBU/0.jpg)](https://www.youtube.com/watch?v=WaDtwA2EJBU)
 
 # 3rd Party resources
 ## Phone Holder
